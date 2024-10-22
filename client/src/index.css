@@ -10,7 +10,7 @@ body {
   font-family: "poppins";
 }
 header {
-  background: #ffffff;
+  background: #fff;
 }
 
 header .container {
@@ -33,11 +33,11 @@ header a {
 }
 .home {
   display: grid;
-  grid-template-columns: 3, 1fr;
+  grid-template-columns: 3fr, 1fr;
   gap: 100px;
 }
 .workout-details {
-  background: #ffffff;
+  background: #fff;
   border-radius: 4px;
   margin: 20px auto;
   padding: 20px;

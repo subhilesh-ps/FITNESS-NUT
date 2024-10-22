@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import WorkoutDetails from "../components/WorkoutDeatils";
 import WorkoutForm from "../components/WorkoutForm";
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
 const Home = () => {
-  const [workouts, setWorkouts] = useState(null);
+  const { workouts, dispatch } = useWorkoutsContext();
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
@@ -12,7 +13,7 @@ const Home = () => {
         const json = await response.json();
         console.log(json); // Check the parsed JSON
         if (response.ok) {
-          setWorkouts(json);
+          dispatch({ type: "SET_WORKOUTS", payload: json });
         }
       } catch (error) {
         console.error("Fetch Error:", error);
