@@ -96,3 +96,10 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
+.delete {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  margin-left: 100px;
+}
