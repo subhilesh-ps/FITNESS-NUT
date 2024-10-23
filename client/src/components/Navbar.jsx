@@ -4,7 +4,7 @@ const Navbar = () => {
     <header>
       <div className="container">
         <Link to="/">
-          <h1>Workout Buddy</h1>
+          <h1 style={{ alignItems: "center" }}>FITNESS-NUT</h1>
         </Link>
       </div>
     </header>

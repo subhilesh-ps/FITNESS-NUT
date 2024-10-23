@@ -1,4 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+import { formatDistance } from "date-fns";
+import { MdAutoDelete } from "react-icons/md";
 
 const WorkoutDeatils = ({ workout }) => {
   const { dispatch } = useWorkoutsContext();
@@ -15,6 +18,7 @@ const WorkoutDeatils = ({ workout }) => {
   return (
     <div className="workout-details">
       <h4>{workout.title}</h4>
+
       <p>
         <strong>Load (kg): </strong>
         {workout.load}
@@ -23,9 +27,10 @@ const WorkoutDeatils = ({ workout }) => {
         <strong>Reps: </strong>
         {workout.reps}
       </p>
-      <p>{workout.createAt}</p>
+      <p>{formatDistance(new Date(workout.createdAt), new Date(), { addSuffix: true })}</p>
+
       <span onClick={handleClick} className="delete">
-        Delete
+        <MdAutoDelete />
       </span>
     </div>
   );
