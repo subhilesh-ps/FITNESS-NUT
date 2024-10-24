@@ -27,7 +27,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(19, 19, 17, 0.97);
+  background: rgba(104, 104, 102, 0.712);
 }
 
 header .container {
@@ -169,7 +169,7 @@ div.error {
   align-items: center;
   justify-content: center;
   background: rgb(135, 43, 43);
-  color: rgb(4, 4, 5) !important;
+  color: rgb(6, 6, 6) !important;
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
